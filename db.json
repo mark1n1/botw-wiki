@@ -1,0 +1,74 @@
+{
+  "favorites": [
+    {
+      "id": 126,
+      "image": "https://botw-compendium.herokuapp.com/api/v2/entry/guardian_skywatcher/image",
+      "name": "guardian skywatcher",
+      "description": "The Sheikah of ancient Hyrule developed this as a weapon to combat Ganon. This flying model is an improvement over the walking type, capable of either attacking or surveying from the air. Destroying the propeller will ground it.",
+      "commonLocations": [
+        "Hyrule Field",
+        "Akkala Highlands"
+      ]
+    },
+    {
+      "id": 106,
+      "image": "https://botw-compendium.herokuapp.com/api/v2/entry/stalkoblin/image",
+      "name": "stalkoblin",
+      "description": "The remains of Bokoblins appear in the dark of the night. While they're fragile enough to crumble from a single blow, as long as a skull remains intact, they'll continue to pull themselves back together and go on fighting. Sometimes the body will pick up the wrong skull, but this doesn't seem to be a problem...",
+      "commonLocations": [
+        "Hyrule Field",
+        "Great Hyrule Forest"
+      ]
+    },
+    {
+      "id": 97,
+      "image": "https://botw-compendium.herokuapp.com/api/v2/entry/fire_wizzrobe/image",
+      "name": "fire wizzrobe",
+      "description": "These spell-casting monsters can be found all over Hyrule. They use their fire rods to hurl fireballs or to summon flaming monsters and have been known to severely raise the temperature around them. The weather will normalize once the Wizzrobe is defeated.",
+      "commonLocations": [
+        "Hyrule Field",
+        "Great Hyrule Forest"
+      ]
+    },
+    {
+      "id": 150,
+      "image": "https://botw-compendium.herokuapp.com/api/v2/entry/stalnox/image",
+      "name": "stalnox",
+      "description": "The mere remains of what was once a giant monster known as a Hinox. These skeletal beasts appear at nighttime. Much like their living counterparts, the Stalnox will tear entire trees from the ground to use as weapons. Furthermore, even if it appears defeated at first, it will keep coming back for more as long as its eye is left intact.",
+      "commonLocations": [
+        "Hyrule Field",
+        "West Necluda"
+      ]
+    },
+    {
+      "id": 75,
+      "image": "https://botw-compendium.herokuapp.com/api/v2/entry/bladed_rhino_beetle/image",
+      "name": "bladed rhino beetle",
+      "description": "This beetle's razor-sharp horns demand that you handle it with care. Boil the horns alongside monster parts to concoct an elixir that will raise your attack power.",
+      "commonLocations": [
+        "West Necluda",
+        "East Necluda"
+      ]
+    },
+    {
+      "id": 76,
+      "image": "https://botw-compendium.herokuapp.com/api/v2/entry/rugged_rhino_beetle/image",
+      "name": "rugged rhino beetle",
+      "description": "This beetle's hard body resembles armor. When the shell is cooked with monster parts, the resulting elixir boosts your defense.",
+      "commonLocations": [
+        "Hyrule Field",
+        "Faron Grasslands"
+      ]
+    },
+    {
+      "id": 100,
+      "image": "https://botw-compendium.herokuapp.com/api/v2/entry/meteo_wizzrobe/image",
+      "name": "meteo wizzrobe",
+      "description": "These spell-casting monsters can be found all over Hyrule. They use their meteor rods to hurl fireballs or to summon flaming monsters and have been known to severely raise the temperature around them. The weather will normalize once the Wizzrobe is defeated.",
+      "commonLocations": [
+        "Hyrule Field",
+        "Eldin Canyon"
+      ]
+    }
+  ]
+}

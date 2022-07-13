@@ -45,6 +45,26 @@ function NavBar() {
         >
           Monsters
         </NavLink>
+        <NavLink
+          to="/favorites"
+          // exact
+          style={linkStyles}
+          activestyle={{
+            background: "darkblue",
+          }}
+        >
+          Favorites
+        </NavLink>
+        <NavLink
+          to="/"
+          // exact
+          style={linkStyles}
+          activestyle={{
+            background: "darkblue",
+          }}
+        >
+          Home
+        </NavLink>
       </center>
     </div>
   );

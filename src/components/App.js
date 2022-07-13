@@ -7,12 +7,14 @@ import Monsters from './Monsters';
 import Creatures from './Creatures';
 import Filter from './Filter';
 import Main from './Main';
+import Favorites from './Favorites';
 
 function App() {
   const [filter, setFilter] = useState("");
   const [items, setItems] = useState([]);
   const [creatures, setCreatures] = useState([]);
   const [monsters, setMonsters] = useState([]);
+  const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     fetch('https://botw-compendium.herokuapp.com/api/v2/category/equipment')
@@ -26,10 +28,24 @@ function App() {
       fetch('https://botw-compendium.herokuapp.com/api/v2/category/monsters')
         .then(r => r.json())
         .then(monsters => setMonsters(monsters.data));
+
+      fetch('http://localhost:8000/favorites')
+        .then(r => r.json())
+        .then(favorites => setFavorites(favorites));
   }, []);
   
   function handleFilterChange(filter) {
     setFilter(filter);
+  }
+
+  function handleAddFavoriteClick(item) {
+    setFavorites([...favorites, item]);
+  }
+
+  function handleFavoriteDeleted(id) {
+    const updatedFavorites = favorites.filter(favorite => favorite.id !== id);
+
+    setFavorites(updatedFavorites);
   }
 
   return (
@@ -42,9 +58,10 @@ function App() {
       <NavBar />
       <Filter onFilterChange={ handleFilterChange }/>
       <Routes>
-        <Route exact path="/equipment" element={<Equipment items={ items } filter={ filter }/>} />
-        <Route exact path="/monsters" element={<Monsters monsters={ monsters } filter={ filter }/>} />
-        <Route exact path="/creatures" element={<Creatures creatures={ creatures } filter={ filter }/>} />
+        <Route exact path="/equipment" element={<Equipment items={ items } filter={ filter } handleAddFavoriteClick={ handleAddFavoriteClick }/>} />
+        <Route exact path="/monsters" element={<Monsters monsters={ monsters } filter={ filter } handleAddFavoriteClick={ handleAddFavoriteClick }/>} />
+        <Route exact path="/creatures" element={<Creatures favorites={ favorites } creatures={ creatures } filter={ filter } handleAddFavoriteClick={ handleAddFavoriteClick }/>} />
+        <Route exact path="/favorites" element={<Favorites filter={ filter }favorites={ favorites } handleFavoriteDeleted={ handleFavoriteDeleted }/> } />
         <Route exact path="/" element={<Main/>} />
       </Routes>
     </div>

@@ -2,7 +2,7 @@ import React from 'react';
 import { CardGroup } from 'semantic-ui-react'
 import CardItem from './CardItem';
 
-function Equipment({ items, filter }) {
+function Equipment({ items, filter, handleAddFavoriteClick }) {
   // const [items, setItems] = useState([]);
 
   // useEffect(() => {
@@ -23,10 +23,12 @@ function Equipment({ items, filter }) {
         {handleEquipmentData().map((item) => (
           <CardItem 
             key={ item.id }
+            id={ item.id }
             image={ item.image }
             name={ item.name }
             description={ item.description }
             commonLocations={ item.common_locations }
+            handleAddFavoriteClick={ handleAddFavoriteClick }
           />
         ))}
       </CardGroup>

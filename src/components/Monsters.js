@@ -2,7 +2,7 @@ import React from 'react';
 import CardItem from './CardItem';
 import { CardGroup } from 'semantic-ui-react';
 
-function Monsters({ monsters, filter }) {
+function Monsters({ monsters, filter, handleAddFavoriteClick }) {
   // const [monsters, setMonsters] = useState([]);
 
   // useEffect(() => {
@@ -22,11 +22,13 @@ function Monsters({ monsters, filter }) {
       {handleMonstersData().map((monster) => (
         <CardItem 
           key={ monster.id }
+          id={ monster.id }
           image={ monster.image }
           name={ monster.name }
           description={ monster.description }
           commonLocations={ monster.common_locations }
           drops={ monster.drops }
+          handleAddFavoriteClick={ handleAddFavoriteClick }
         />
       ))}
     </CardGroup>

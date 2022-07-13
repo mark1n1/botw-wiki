@@ -17,3 +17,7 @@ code {
   margin-right: auto;
   margin-left: auto;
 }
+
+.clickable {
+  cursor: pointer;
+}
